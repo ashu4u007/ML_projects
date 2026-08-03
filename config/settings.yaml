@@ -1,0 +1,36 @@
+# ML Projects Configuration
+
+project_name: "ML_projects"
+version: "1.0.0"
+
+# Data settings
+data:
+  data_dir: "./data"
+  train_ratio: 0.8
+  test_ratio: 0.2
+  random_seed: 42
+
+# Model settings
+model:
+  type: "neural_network"
+  hidden_layers: [128, 64, 32]
+  activation: "relu"
+  output_activation: "softmax"
+  dropout_rate: 0.5
+
+# Training settings
+training:
+  epochs: 100
+  batch_size: 32
+  learning_rate: 0.001
+  optimizer: "adam"
+  loss_function: "categorical_crossentropy"
+
+# Evaluation settings
+evaluation:
+  metrics:
+    - accuracy
+    - precision
+    - recall
+    - f1_score
+  test_size: 0.2
